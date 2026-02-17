@@ -1,5 +1,3 @@
-import ContactForm from "./components/ContactForm";
-
 export default function Home() {
   return (
     <main>
@@ -59,19 +57,33 @@ export default function Home() {
       {/* Contact */}
       <section className="contact" id="contact">
         <h2 className="section-title">Get in Touch</h2>
-        <div className="contact-grid">
-          <div className="contact-info">
-            <p><strong>Phone</strong><br /><a href="tel:+15551234567">(555) 123-4567</a></p>
-            <p><strong>Email</strong><br /><a href="mailto:info@cossackearthworks.com">info@cossackearthworks.com</a></p>
-            <p className="contact-note">Serving the greater area with reliable excavation services.</p>
-          </div>
-          <ContactForm />
+        <p className="contact-subtitle">
+          Ready to start your project? Reach out — we&apos;d love to hear from you.
+        </p>
+        <div className="contact-cards">
+          <a href="tel:+17802218831" className="contact-card">
+            <span className="contact-card-icon">✆</span>
+            <span className="contact-card-label">Call Us</span>
+            <span className="contact-card-value">(780) 221-8831</span>
+          </a>
+          <a href="mailto:cossackearthworks@gmail.com" className="contact-card">
+            <span className="contact-card-icon">✉</span>
+            <span className="contact-card-label">Email Us</span>
+            <span className="contact-card-value">cossackearthworks@gmail.com</span>
+          </a>
         </div>
+        <p className="contact-note">Serving the greater area with reliable excavation services.</p>
       </section>
 
       {/* Footer */}
       <footer className="footer">
         <p>© {new Date().getFullYear()} Cossack Earthworks. All rights reserved.</p>
+        <p className="footer-credit">
+          made by{" "}
+          <a href="https://www.brandtsystems.ca/" target="_blank" rel="noopener noreferrer">
+            Brandt Systems
+          </a>
+        </p>
       </footer>
     </main>
   );
