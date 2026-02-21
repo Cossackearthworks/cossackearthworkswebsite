@@ -23,7 +23,9 @@ export default function Home() {
     <main>
       {/* Navbar */}
       <nav className="navbar">
-        <a href="#" className="nav-logo">Cossack Earthworks</a>
+        <a href="#" className="nav-logo">
+          Cossack Earthworks
+        </a>
         <div className="nav-links">
           <a href="#services">Services</a>
           <a href="#gallery">Gallery</a>
@@ -49,13 +51,18 @@ export default function Home() {
           />
         </div>
         <div className="hero-content">
-          <h1 className="hero-title">Cossack Earthworks</h1>
+          <Image
+            src="/Cossack_Earthworks_Logo_page-0001-removebg-preview.png"
+            alt="Cossack Earthworks"
+            width={340}
+            height={340}
+            className="hero-logo"
+          />
           <p className="hero-desc">
             Big jobs or small, we move dirt properly the first time. Foundations, site prep, and everything in between.
           </p>
           <a href="#contact" className="cta-button">Contact Us</a>
         </div>
-        <div className="hero-scroll">↓ Scroll</div>
       </section>
 
       {/* Services */}
@@ -138,7 +145,8 @@ export default function Home() {
         <div className="awards-list">
           <div className="award-card">
             <span className="award-icon">★</span>
-            <h3 className="award-name">Best in Community</h3>
+            <h3 className="award-name">Community Vote 2025 Category Winner</h3>
+            <p className="award-category">Excavation</p>
             <p className="award-location">Sherwood Park</p>
           </div>
         </div>

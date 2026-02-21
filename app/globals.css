@@ -61,6 +61,16 @@ h1, h2, h3 {
   text-decoration: none;
   white-space: nowrap;
   letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-logo-img {
+  filter: invert(1);
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .nav-logo:hover {
@@ -70,6 +80,9 @@ h1, h2, h3 {
 .nav-links {
   display: flex;
   gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-links a {
@@ -137,11 +150,23 @@ h1, h2, h3 {
     font-size: 1.05rem;
   }
 
+  .nav-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-logo {
+    width: 48vw;
+    margin-bottom: 0.25rem;
+  }
+
   .nav-contact {
     order: 2;
   }
 
   .nav-links {
+    position: static;
+    transform: none;
     order: 3;
     width: 100%;
     justify-content: center;
@@ -187,6 +212,17 @@ h1, h2, h3 {
   position: relative;
   z-index: 1;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo {
+  width: min(340px, 44vw);
+  height: auto;
+  object-fit: contain;
+  margin-bottom: -1.25rem;
+  filter: invert(1) drop-shadow(0 4px 24px rgba(0, 0, 0, 0.5));
 }
 
 .hero-title {
@@ -224,14 +260,6 @@ h1, h2, h3 {
 
 .cta-button:hover {
   background: var(--ochre-light);
-}
-
-.hero-scroll {
-  position: absolute;
-  bottom: 2rem;
-  font-size: 0.85rem;
-  color: var(--sand-muted);
-  opacity: 0.7;
 }
 
 /* Services */
@@ -422,6 +450,14 @@ h1, h2, h3 {
   font-weight: 700;
   font-size: 1.35rem;
   color: var(--white);
+}
+
+.award-category {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ochre-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .award-location {
