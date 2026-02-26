@@ -58,6 +58,7 @@ export default function Home() {
             height={340}
             className="hero-logo"
           />
+          <p className="hero-tagline">Serving Sherwood Park &amp; Area Since 2024</p>
           <p className="hero-desc">
             Big jobs or small, we move dirt properly the first time. Foundations, site prep, and everything in between.
           </p>
@@ -70,7 +71,7 @@ export default function Home() {
         <h2 className="section-title">What We Do</h2>
         <div className="services-grid">
           <div className="service-card">
-            <Image src="/mini-excavator-trench-digging.jpg" alt="Excavation" fill sizes="(max-width: 700px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+            <Image src="/mini-excavator-trench-digging.jpg" alt="Excavation" fill sizes="(max-width: 700px) 100vw, 50vw" style={{ objectFit: "cover", objectPosition: "center 5%" }} />
             <div className="service-card-overlay" />
             <div className="service-card-content">
               <h3>Excavation</h3>
@@ -78,11 +79,11 @@ export default function Home() {
             </div>
           </div>
           <div className="service-card">
-            <Image src="/plate-compactor-driveway-finish.jpg" alt="Grading" fill sizes="(max-width: 700px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+            <Image src="/gradingphoto.jpg" alt="Grading" fill sizes="(max-width: 700px) 100vw, 50vw" style={{ objectFit: "cover" }} />
             <div className="service-card-overlay" />
             <div className="service-card-content">
               <h3>Grading</h3>
-              <p>Precision leveling for driveways, building pads, parking lots, and yards.</p>
+              <p>Precision leveling and sloping for land developments and commercial building sites.</p>
             </div>
           </div>
           <div className="service-card">
@@ -98,7 +99,7 @@ export default function Home() {
             <div className="service-card-overlay" />
             <div className="service-card-content">
               <h3>Gravel</h3>
-              <p>Gravel supply, spreading, and compaction for roads, pads, and drainage layers.</p>
+              <p>Supply placement and compaction of aggregate products for driveways, concrete slabs and building pads.</p>
             </div>
           </div>
         </div>
