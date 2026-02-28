@@ -33,8 +33,8 @@ export default function Home() {
           <a href="#contact">Contact</a>
         </div>
         <div className="nav-contact">
-          <a href="tel:+17802218831" className="nav-phone">✆ (780) 221-8831</a>
           <a href="mailto:cossackearthworks@gmail.com" className="nav-email">✉ cossackearthworks@gmail.com</a>
+          <a href="tel:+17802218831" className="nav-phone">✆ (780) 221-8831</a>
         </div>
       </nav>
 
