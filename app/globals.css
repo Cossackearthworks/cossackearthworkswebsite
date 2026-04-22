@@ -398,12 +398,34 @@ h1, h2, h3 {
 
 @media (max-width: 480px) {
   .gallery-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 240px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
+  .gallery-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .gallery-grid::-webkit-scrollbar-track {
+    background: var(--earth-medium);
+  }
+
+  .gallery-grid::-webkit-scrollbar-thumb {
+    background: var(--earth-light);
+    border-radius: 2px;
+  }
+
+  .gallery-item,
   .gallery-item-tall {
-    grid-row: span 1;
+    flex: 0 0 75vw;
+    height: 240px;
+    grid-row: unset;
+    scroll-snap-align: start;
   }
 }
 
@@ -499,7 +521,7 @@ h1, h2, h3 {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
@@ -562,6 +584,25 @@ h1, h2, h3 {
   opacity: 0.7;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: var(--sand-muted);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-link:hover {
+  color: var(--ochre-light);
+  transform: translateY(-2px);
+}
+
 /* Footer */
 .footer {
   padding: 2rem;
@@ -569,6 +610,22 @@ h1, h2, h3 {
   border-top: 1px solid var(--earth-light);
   color: var(--sand-muted);
   font-size: 0.9rem;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.footer-links a {
+  color: var(--sand-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--ochre);
+  text-decoration: underline;
 }
 
 .footer-credit {
@@ -628,4 +685,109 @@ h1, h2, h3 {
 
 .lightbox-close:hover {
   opacity: 1;
+}
+
+/* Privacy Policy Page */
+.policy-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.policy-container {
+  flex: 1;
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8rem 2rem 5rem;
+}
+
+.policy-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.policy-updated {
+  color: var(--sand-muted);
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+  opacity: 0.7;
+}
+
+.policy-section {
+  margin-bottom: 2.5rem;
+}
+
+.policy-section h2 {
+  font-size: 1.2rem;
+  color: var(--ochre-light);
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(196, 139, 60, 0.2);
+}
+
+.policy-section p {
+  color: var(--sand);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.policy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.policy-section ul li {
+  color: var(--sand);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.policy-section ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--ochre);
+}
+
+.policy-section a {
+  color: var(--ochre-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.policy-section a:hover {
+  color: var(--ochre);
+  text-decoration: underline;
+}
+
+.policy-address {
+  font-style: normal;
+  color: var(--sand);
+  line-height: 1.9;
+  margin-top: 0.5rem;
+}
+
+.policy-address a {
+  color: var(--ochre-light);
+  text-decoration: none;
+}
+
+.policy-address a:hover {
+  color: var(--ochre);
+  text-decoration: underline;
+}
+
+.policy-back {
+  margin-top: 3.5rem;
 }
